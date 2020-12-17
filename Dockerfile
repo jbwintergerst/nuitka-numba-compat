@@ -7,11 +7,6 @@ WORKDIR /app
 
 COPY mymodule mymodule
 
-# compile numba
-RUN python -m mymodule.utils
-# remove now useless utils.py (is it useless ?)
-RUN rm -f mymodule/utils.py
-
 ### comment these lines to se the code working without nuitka copilation
 
 # compile nuitka

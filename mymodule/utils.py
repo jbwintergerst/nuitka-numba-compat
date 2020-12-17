@@ -1,12 +1,6 @@
-from numba.pycc import CC
-
-cc = CC('utils')
+from numba import njit
 
 
-@cc.export('add', 'i4(i4, i4)')
+@njit
 def add(a: int, b: int) -> int:
     return a + b
-
-
-if __name__ == "__main__":
-    cc.compile()
